@@ -1,0 +1,65 @@
+#buildPack: liberty-new
+buildPack: liberty
+buildPackGitURL: 'https://github.com/sdaschner/jenkins-x-kubernetes.git'
+buildPackGitRef: 'master'
+#
+#
+#
+pipelineConfig:
+#
+#  pipelines:
+#    release:
+#      pipeline:
+#        stages:
+#        - name: setup
+#          steps:
+#          - groovy: git 'https://github.com/sdaschner/jenkins-x-quickstart-liberty.git'
+#          agent:
+#            container: maven-java11
+#            image: maven-java11
+#            label: jenkins-maven
+#
+#        - name: build
+#          steps:
+#          - sh: echo \$(jx-release-version) > VERSION
+#            name: next-version
+#            comment: so we can retrieve the version in later steps
+#          - sh: mvn versions:set -DnewVersion=\$(cat VERSION)
+#            name: set-version
+#          - sh: jx step tag --version \$(cat VERSION)
+#            name: tag-version
+#          - sh: mvn clean deploy
+#            name: mvn-deploy
+#          #        - sh: mvn liberty:create-server liberty:install-feature liberty:install-apps liberty:start-server failsafe:integration-test liberty:stop-server failsafe:verify
+#          - sh: echo doing integration test; sleep 3
+#            name: mvn-liberty-integration-test
+#          - sh: skaffold version
+#            name: skaffold-version
+#          - sh: export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml
+#            name: container-build
+#          - sh: jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\$(cat VERSION)
+#            name: post-build
+#
+#        - name: promote
+#          steps:
+#          - dir: charts/jenkins-x-quickstart-liberty
+#            steps:
+#            - sh: jx step changelog --version v\$(cat ../../VERSION)
+#              name: changelog
+#            - comment: release the helm chart
+#              sh: jx step helm release
+#              name: helm-release
+#            - comment: promote through all 'Auto' promotion Environments
+#              sh: jx promote -b --all-auto --timeout 1h --version \$(cat ../../VERSION)
+#              name: jx-promote
+#            - sh: echo waiting for promotion to be fully rolled-out
+#              name: wait-deployment
+#
+#        - name: system-test
+#          steps:
+#          #          - sh: mvn failsafe:integration-test failsafe:verify -Dliberty.test.host=jenkins-x-quickstart-liberty.jx-production.34.90.141.229.nip.io -Dliberty.test.port=80
+#          - sh: echo doing system test; sleep 3
+#            name: mvn-liberty-integration-test
+#
+  agent:
+    container: maven-java11
