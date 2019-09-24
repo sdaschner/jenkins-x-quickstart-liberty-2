@@ -6,24 +6,30 @@ RELEASE_VERSION := $(shell cat ../../VERSION)
 DB_VERSION := $(shell cat ../../DB_VERSION)
 
 build: clean
+  echo doing a build
 	rm -rf requirements.lock
 	helm dependency build
 	helm lint
 
 install: clean build
+  echo doing an install
 	helm install . --name ${NAME}
 
 upgrade: clean build
+  echo doing an upgrade
 	helm upgrade ${NAME} .
 
 delete:
+  echo doing a delete
 	helm delete --purge ${NAME}
 
 clean:
+  echo doing a clean
 	rm -rf charts
 	rm -rf ${NAME}*.tgz
 
 release: clean
+  echo doing a release
 	helm dependency build
 	helm lint
 	helm init --client-only
@@ -32,6 +38,7 @@ release: clean
 	rm -rf ${NAME}*.tgz%
 
 tag:
+  echo doing a tag
 ifeq ($(OS),Linux)
 	sed -i -e "s/version:.*/version: $(RELEASE_VERSION)/" Chart.yaml
 	sed -i -e "s|repository:.*|repository: $(DOCKER_REGISTRY)\/testing-215306\/jenkins-x-quickstart-liberty-2|" values.yaml
@@ -42,6 +49,8 @@ else
 	echo "platfrom $(OS) not supported to release from"
 	exit -1
 endif
+  echo updated versions, values.yaml is:
+  cat values.yaml
 	git add --all
 	git commit -m "release $(RELEASE_VERSION)" --allow-empty # if first release then no verion update is performed
 	git tag -fa v$(RELEASE_VERSION) -m "Release version $(RELEASE_VERSION)"
