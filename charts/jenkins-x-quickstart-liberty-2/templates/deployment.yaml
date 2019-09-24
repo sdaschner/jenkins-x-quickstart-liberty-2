@@ -14,8 +14,11 @@ spec:
       labels:
         draft: {{ default "draft-app" .Values.draft }}
         app: {{ template "fullname" . }}
-{{- if .Values.podAnnotations }}
       annotations:
+        sdDbImageTag: {{ default "N/A" .Values.dbImage.dbTag }}
+        sdDbImageRep: {{ default "N/A" .Values.dbImage.dbRepository }}
+        sdDbImagePolicy: {{ default "N/A" .Values.dbImage.pullPolicy }}
+{{- if .Values.podAnnotations }}
 {{ toYaml .Values.podAnnotations | indent 8 }}
 {{- end }}
     spec:

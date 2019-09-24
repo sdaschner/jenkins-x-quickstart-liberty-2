@@ -3,6 +3,7 @@ CURRENT=$(pwd)
 NAME := jenkins-x-quickstart-liberty-2
 OS := $(shell uname)
 RELEASE_VERSION := $(shell cat ../../VERSION)
+DB_VERSION := $(shell cat ../../DB_VERSION)
 
 build: clean
 	rm -rf requirements.lock
@@ -31,13 +32,12 @@ release: clean
 	rm -rf ${NAME}*.tgz%
 
 tag:
-ifeq ($(OS),Darwin)
-	sed -i "" -e "s/version:.*/version: $(RELEASE_VERSION)/" Chart.yaml
-	sed -i "" -e "s/tag:.*/tag: $(RELEASE_VERSION)/" values.yaml
-else ifeq ($(OS),Linux)
+ifeq ($(OS),Linux)
 	sed -i -e "s/version:.*/version: $(RELEASE_VERSION)/" Chart.yaml
 	sed -i -e "s|repository:.*|repository: $(DOCKER_REGISTRY)\/testing-215306\/jenkins-x-quickstart-liberty-2|" values.yaml
 	sed -i -e "s/tag:.*/tag: $(RELEASE_VERSION)/" values.yaml
+	sed -i -e "s|dbRepository:.*|dbRepository: $(DOCKER_REGISTRY)\/testing-215306\/jenkins-x-quickstart-liberty-2-db-migration|" values.yaml
+	sed -i -e "s/dbTag:.*/dbTag: $(DB_VERSION)/" values.yaml
 else
 	echo "platfrom $(OS) not supported to release from"
 	exit -1
