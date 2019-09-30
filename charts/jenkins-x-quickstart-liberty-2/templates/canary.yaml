@@ -15,11 +15,11 @@ spec:
   {{- if .Values.canary.service.gateways }}
 gateways:
   {{ toYaml .Values.canary.service.gateways | indent 4 }}
-  {{- end }}
-  {{- if .Values.canary.service.hosts }}
+    {{- end }}
+    {{- if .Values.canary.service.hosts }}
 hosts:
   {{ toYaml .Values.canary.service.hosts | indent 4 }}
-  {{- end }}
+    {{- end }}
 canaryAnalysis:
   interval: {{ .Values.canary.canaryAnalysis.interval }}
   threshold: {{ .Values.canary.canaryAnalysis.threshold }}
@@ -28,6 +28,6 @@ canaryAnalysis:
   {{- if .Values.canary.canaryAnalysis.metrics }}
 metrics:
   {{ toYaml .Values.canary.canaryAnalysis.metrics | indent 4 }}
-  {{- end }}
-  {{- end }}
-  {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- end }}
