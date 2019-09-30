@@ -8,7 +8,7 @@ public class HelloResource {
 
     @GET
     public String hello() {
-        return "Hi!";
+        return "Привет!";
     }
 
 
