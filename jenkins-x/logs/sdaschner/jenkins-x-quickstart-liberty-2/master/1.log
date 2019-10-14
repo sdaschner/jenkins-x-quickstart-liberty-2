@@ -1,20 +1,20 @@
 
-Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qd2pv[0m
-{"level":"warn","ts":1569224779.2301629,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1569224779.230622,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-7x4hq[0m
+{"level":"warn","ts":1571041947.2012324,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571041947.2018418,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-svp2x[0m
-{"level":"warn","ts":1569224784.2266324,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1569224784.2276406,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/jenkins-x-quickstart-liberty-2\""}
+Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xhpqj[0m
+{"level":"warn","ts":1571041949.8061068,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1571041949.8091445,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sdaschner-jenkins-x-quickstart-wxf9w[0m
-{"level":"warn","ts":1569224913.4270983,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1569224915.267802,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty-2.git @ v1.0.0 in path /workspace/source"}
+Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sdaschner-jenkins-x-quickstart-t6ks9[0m
+{"level":"warn","ts":1571041980.9583,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571041982.3560827,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/jenkins-x-quickstart-liberty-2.git @ v1.0.29 in path /workspace/source"}
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:157b35b810c92a158a427bfeeb6f40c26a8d8352
+Using SHAs from PULL_REFS=master:b739b392b6cc1b8e31fb69cdc9cbb893365430b3
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
@@ -25,7 +25,7 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] ----< io.openliberty.samples:io.openliberty.sample.getting.started >----
-[INFO] Building io.openliberty.sample.getting.started 1.0.0
+[INFO] Building io.openliberty.sample.getting.started 1.0.29
 [INFO] --------------------------------[ war ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ io.openliberty.sample.getting.started ---
@@ -53,33 +53,36 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] Assembling webapp [io.openliberty.sample.getting.started] in [/workspace/source/target/getting-started]
 [INFO] Processing war project
 [INFO] Copying webapp resources [/workspace/source/src/main/webapp]
-[INFO] Webapp assembled in [116 msecs]
+[INFO] Webapp assembled in [364 msecs]
 [INFO] Building war: /workspace/source/target/getting-started.war
 [INFO] 
 [INFO] --- maven-install-plugin:2.4:install (default-install) @ io.openliberty.sample.getting.started ---
-[INFO] Installing /workspace/source/target/getting-started.war to /home/jenkins/.mvnrepository/io/openliberty/samples/io.openliberty.sample.getting.started/1.0.0/io.openliberty.sample.getting.started-1.0.0.war
-[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/io/openliberty/samples/io.openliberty.sample.getting.started/1.0.0/io.openliberty.sample.getting.started-1.0.0.pom
+[INFO] Installing /workspace/source/target/getting-started.war to /home/jenkins/.mvnrepository/io/openliberty/samples/io.openliberty.sample.getting.started/1.0.29/io.openliberty.sample.getting.started-1.0.29.war
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/io/openliberty/samples/io.openliberty.sample.getting.started/1.0.29/io.openliberty.sample.getting.started-1.0.29.pom
 [INFO] 
 [INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ io.openliberty.sample.getting.started ---
 [INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  01:01 min
-[INFO] Finished at: 2019-09-23T07:49:43Z
+[INFO] Total time:  01:04 min
+[INFO] Finished at: 2019-10-14T08:34:11Z
 [INFO] ------------------------------------------------------------------------
 
+Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-liberty-integration-test[0m
+doing integration test
+
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
-v0.37.0
+v0.38.0
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
 [36mINFO[0m[0000] Downloading base image open-liberty:javaee8-java12 
-ERROR: logging before flag.Parse: E0923 07:49:44.220952       8 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0923 07:49:44.227462       8 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2019/09/23 07:49:44 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:bd1da23d2d7dbbb1069acfed85885ced51c685c08a3742e1c9b3ea3ffb09b9e7: no such file or directory 
+ERROR: logging before flag.Parse: E1014 08:34:15.356514      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E1014 08:34:15.360119      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/10/14 08:34:15 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0847a27ebdcdf9accf2dafd370742348bb2c81cee1e0fc8dd998da8a94700558: no such file or directory 
 [36mINFO[0m[0001] Downloading base image open-liberty:javaee8-java12 
-2019/09/23 07:49:45 No matching credentials were found, falling back on anonymous
+2019/10/14 08:34:16 No matching credentials were found, falling back on anonymous
 [36mINFO[0m[0002] Using files from context: [/workspace/source/src/main/liberty/config] 
 [36mINFO[0m[0002] Using files from context: [/workspace/source/target/getting-started.war] 
 [36mINFO[0m[0002] Skipping unpacking as no commands require it. 
@@ -90,28 +93,38 @@ ERROR: logging before flag.Parse: E0923 07:49:44.227462       8 metadata.go:159]
 [36mINFO[0m[0002] Using files from context: [/workspace/source/target/getting-started.war] 
 [36mINFO[0m[0002] COPY target/*.war /opt/ol/wlp/usr/servers/defaultServer/apps/ 
 [36mINFO[0m[0002] Taking snapshot of files...                  
-2019/09/23 07:49:48 existing blob: sha256:3ab6e950cac5ee4dca030b691fbcbd473608dc0c30326246c59495131a33270d
-2019/09/23 07:49:48 existing blob: sha256:d83811f270d56d34a208f721f3dbf1b9242d1900ad8981fc7071339681998a31
-2019/09/23 07:49:48 existing blob: sha256:5667fdb72017d1fb364744ca1abf7b6f3bbe9c98c3786f294a461c2866db69ab
-2019/09/23 07:49:48 existing blob: sha256:7fc152dfb3a6b5c9a436b49ff6cd72ed7eb5f1fd349128b50ee04c3c5c2355fb
-2019/09/23 07:49:48 existing blob: sha256:ee671aafb583e2321880e275c94d49a49185006730e871435cd851f42d2a775d
-2019/09/23 07:49:51 pushed blob: sha256:8709cbd1d4c8b37cd2bd5c5d32c270b2853a66c286a44fb6b4dc9a7fdf0acc83
-2019/09/23 07:49:51 pushed blob: sha256:ca104acd09917241fdcad1d9aef4b0f2178f9841b47cd791b1a42d5622d37763
-2019/09/23 07:49:51 pushed blob: sha256:3f7d937d0c44aefaf0eafa71a98c78176ed7d215aa8f6fb136b86304fdf13537
-2019/09/23 07:49:51 pushed blob: sha256:68868ee752fbfa08d88a682921762e51a290556b54359d0a50926b3d2152b395
-2019/09/23 07:49:51 pushed blob: sha256:5711ffff20e96702f47079acefa4eed26159baf67d15ec507122f6d32a3faa8a
-2019/09/23 07:49:52 pushed blob: sha256:77a4501cce4a66344d852415e2749b763057aabec4a35b8db5fb041480e7c6c0
-2019/09/23 07:49:52 pushed blob: sha256:95e6604b1f9944d93edf2c5e09954509053b74f45b0c3ac3ee844002100a1ca8
-2019/09/23 07:49:55 pushed blob: sha256:58dbcfbb46c1c4f7a84bb599d3a25a71af7c801150fc36956a5d9631115aba07
-2019/09/23 07:49:59 pushed blob: sha256:dc9b3a9a996b08c37504d908d52276e23f4d52eab7adde52bbd79fc6f504f8cf
-2019/09/23 07:50:02 gcr.io/testing-215306/jenkins-x-quickstart-liberty-2:1.0.0: digest: sha256:aace44436523c6aee291e03fa964732ec106600be463dbce64904133b7926755 size: 2374
+2019/10/14 08:34:19 existing blob: sha256:ee671aafb583e2321880e275c94d49a49185006730e871435cd851f42d2a775d
+2019/10/14 08:34:20 existing blob: sha256:7fc152dfb3a6b5c9a436b49ff6cd72ed7eb5f1fd349128b50ee04c3c5c2355fb
+2019/10/14 08:34:20 existing blob: sha256:d83811f270d56d34a208f721f3dbf1b9242d1900ad8981fc7071339681998a31
+2019/10/14 08:34:20 existing blob: sha256:3ab6e950cac5ee4dca030b691fbcbd473608dc0c30326246c59495131a33270d
+2019/10/14 08:34:20 existing blob: sha256:5667fdb72017d1fb364744ca1abf7b6f3bbe9c98c3786f294a461c2866db69ab
+2019/10/14 08:34:22 pushed blob: sha256:7b744b81e54746dc927e96ccf4d99c1b3e104d514e4102b9432e0594269a59a1
+2019/10/14 08:34:22 pushed blob: sha256:70ecc74bfccb11af48a1042432f2b9b4c1bf44e1b7174258ae379401db675028
+2019/10/14 08:34:23 pushed blob: sha256:b0660c21c9de009a15819f339df4b2fa8e613e9ceb698bcf5eb5f024a8f2c327
+2019/10/14 08:34:23 pushed blob: sha256:19757d41fce04ec95a93194c033515f9bcc14cadc6dec8f18c9d06b49974fb6b
+2019/10/14 08:34:23 pushed blob: sha256:cd2c800d5f79a90f9c3e710ba7ebf2b7539e291f8ed78587564a5886afdaf1a5
+2019/10/14 08:34:23 pushed blob: sha256:275dd289f6d7174272abc41b3247a71ee6c3d26a69992b087498d3ba520661e1
+2019/10/14 08:34:23 pushed blob: sha256:0f64c51b4ab240528a0a84532caab72771f6cf3b829a284128a3670213606232
+2019/10/14 08:34:25 pushed blob: sha256:58dbcfbb46c1c4f7a84bb599d3a25a71af7c801150fc36956a5d9631115aba07
+2019/10/14 08:34:31 pushed blob: sha256:c8b6c0475accf1b8b533e0c58706523fdf67814cc335c85d5193ec87d465822c
+2019/10/14 08:34:33 gcr.io/testing-215306/jenkins-x-quickstart-liberty-2:1.0.29: digest: sha256:93f0bb69ea0fcab5674cec041c4008b2467ff40d7488adf6b3c058d3e5c76f99 size: 2374
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/jenkins-x-quickstart-liberty-2 to an unshallow repository
-no previous commit version found so change diff unavailable
+Generating change log from git ref 9838820c6a58c3b82344c33f2be35d758abd41e5 => 3338fadf48b30d17cf3277ff21035d77c624f09a
+Associating user x-0 in users.jenkins.io with email git@sebastian-daschner.de to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit b739b392b6cc1b8e31fb69cdc9cbb893365430b3 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for *********/jenkins-x-quickstart-liberty-2 and tag v1.0.29 so creating a new release
+Updated the release information at https://github.com/*********/jenkins-x-quickstart-liberty-2/releases/tag/v1.0.29
+generated: /workspace/source/charts/jenkins-x-quickstart-liberty-2/templates/release.yaml
+Created Release jenkins-x-quickstart-liberty-2-1-0-29 resource in namespace **
+Updating PipelineActivity *********-jenkins-x-quickstart-liberty-2-master-1 with version 1.0.29
+Updated PipelineActivities *********-jenkins-x-quickstart-liberty-2-master-1 with release notes URL: https://github.com/*********/jenkins-x-quickstart-liberty-2/releases/tag/v1.0.29
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
@@ -120,13 +133,167 @@ Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file jenkins-x-quickstart-liberty-2-1.0.0.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file jenkins-x-quickstart-liberty-2-1.0.29.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
 Showing logs for build [32msdaschner-jenkins-x-quickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
-Promoting app jenkins-x-quickstart-liberty-2 version 1.0.0 to namespace **-staging
-Created Pull Request: https://github.com/*********/environment-standard-cluster-1-staging/pull/1
-Pull Request https://github.com/*********/environment-standard-cluster-1-staging/pull/1 is merged at sha a7aeb8ca53e56c0ecfd9f0ca77d555e0a2b272ed
-Pull Request merged but we are not waiting for the update pipeline to complete!
-WARNING: Could not find the service URL in namespace **-staging for names jenkins-x-quickstart-liberty-2, **-jenkins-x-quickstart-liberty-2, **-staging-jenkins-x-quickstart-liberty-2
+Promoting app jenkins-x-quickstart-liberty-2 version 1.0.29 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-standard-cluster-1-staging/pull/33
+Rebasing PullRequest due to conflict
+Attempting to cherry pick commits that were on promote-jenkins-x-quickstart-liberty-2-1.0.29 but not yet pushed
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+Rebasing PullRequest due to conflict
+error: Timed out waiting for pull request https://github.com/*********/environment-standard-cluster-1-staging/pull/33 to merge. Waited 1h0m0s
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-promote'. The execution of the pipeline has stopped.[0m
