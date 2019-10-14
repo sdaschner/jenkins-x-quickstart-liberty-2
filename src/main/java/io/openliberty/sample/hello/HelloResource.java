@@ -10,9 +10,7 @@ public class HelloResource {
 
     @GET
     public String hello() {
-        if (new Random().nextDouble() < 0.9)
-            throw new WebApplicationException();
-        return "Hello!";
+        return "Hello";
     }
 
 }
